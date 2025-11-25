@@ -1,40 +1,208 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
 
-		<title>reveal.js</title>
+  <title>Violenza sulle donne | Slides</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/serif.css" id="theme">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <style>
+    /* Palette generale da campagna sociale */
+    body {
+      background: #000;
+      color: #fee2e2;
+    }
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    /* .reveal { */
+    /*   color: #000; */
+    /* } */
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    /* Overlay nero 40% sopra l'immagine di sfondo di ogni slide */
+    .reveal .backgrounds .slide-background {
+      background-size: cover !important;
+      background-position: center center !important;
+    }
+
+    .reveal .backgrounds .slide-background::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2); /* overlay nero 40% */
+      z-index: 1;
+    }
+
+    .reveal .backgrounds .slide-background {
+      z-index: 0;
+    }
+
+    /* Testo slide sopra l’overlay */
+    .reveal .slides {
+      z-index: 2;
+    }
+
+    /* MAXI TITOLI */
+    h1 {
+      font-size: 3.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9F0712;
+      /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
+      margin-bottom: 1.5rem;
+    }
+
+    /* Elenchi puntati SUPER GRANDI (max 2 punti) */
+    ul {
+      margin-top: 1.5rem;
+      list-style-type: disc;
+      font-size: 3.2rem;
+      line-height: 1.4;
+      padding-left: 2.5rem;
+    }
+
+    li {
+      margin: 0.7rem 0;
+      color: #000;
+    }
+
+    /* Colore accento rosso scuro sui bullet importanti */
+    li strong {
+      color: #9F0712;
+    }
+
+    /* Fragments un po’ più morbidi */
+    .fragment {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fragment.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1 - TITOLO -->
+
+      <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
+        <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
+        <h1 class="fragment r-fit-text">VIOLENZA sulle</h1>
+        <h1 class="fragment">DONNE</h1>
+        <!-- <ul> -->
+        <!--   <li class="fragment">I numeri in Italia</li> -->
+        <!--   <li class="fragment">Confronto con l’Europa</li> -->
+        <!--   <li class="fragment">La nuova legge sul consenso</li> -->
+        <!-- </ul> -->
+      </section>
+
+      <section data-background-image="images/fragile.jpg" data-background-opacity="0.46">
+        <h1 style="color:#9F0712" class="r-fit-text">25 novembre 2025</h1>
+        <h1 class="fragment r-fit-text">Giornata internazionale per l'eliminazione della</h1>
+        <h1 class="fragment r-fit-text">violenza contro le DONNE</h1>
+        <!-- <ul> -->
+        <!--   <li class="fragment">I numeri in Italia</li> -->
+        <!--   <li class="fragment">Confronto con l’Europa</li> -->
+        <!--   <li class="fragment">La nuova legge sul consenso</li> -->
+        <!-- </ul> -->
+      </section>
+
+      <section
+        data-background-image="images/fragile.jpg"
+      >
+        <h1 class="fragment r-fit-text">Violenza sulle donne</h1>
+        <ul>
+          <li class="fragment"><strong>I numeri non sono solo numeri</strong></li>
+          <li class="fragment">Ogni dato è una vita spezzata</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 2 - ITALIA, ULTIMI 10 ANNI -->
+      <section
+        data-background-image="images/fragile.jpg"
+        data-auto-animate
+        data-auto-animate-id="it-dati"
+      >
+        <h1 class="fragment">Ultimi 10 anni</h1>
+        <ul>
+          <li class="fragment">Oltre <strong>1.100 donne uccise</strong> in Italia</li>
+          <li class="fragment">Una donna ogni <strong>circa 3 giorni</strong></li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 3 - ITALIA, ULTIMI 20 ANNI -->
+      <section
+        data-background-image="images/fragile.jpg"
+        data-auto-animate
+        data-auto-animate-id="it-dati"
+      >
+        <h1 class="fragment">Ultimi 20 anni</h1>
+        <ul>
+          <li class="fragment">Più di <strong>2.000 vittime</strong> di femminicidio</li>
+          <li class="fragment">La violenza di genere è <strong>strutturale</strong></li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 4 - CONFRONTO EUROPA -->
+      <section
+        data-background-image="images/fragile.jpg"
+      >
+        <h1 class="fragment r-fit-text">Italia ed Europa</h1>
+        <ul>
+          <li class="fragment">Meno omicidi in generale, ma <strong>femminicidi tenaci</strong></li>
+          <li class="fragment">La violenza sulle donne <strong>non è un’emergenza</strong>, è un sistema</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 5 - NUOVA LEGGE -->
+      <section
+        data-background-image="images/fragile.jpg"
+      >
+        <h1 class="fragment r-fit-text">La nuova legge</h1>
+        <ul>
+          <li class="fragment"><strong>Consenso libero e attuale</strong> al centro della definizione di violenza</li>
+          <li class="fragment">La legge cambia, ma deve cambiare anche <strong>la cultura</strong></li>
+        </ul>
+      </section>
+
+      <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
+        <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
+        <!-- <h1 class="fragment r-fit-text">VIOLENZA sulle</h1> -->
+        <!-- <h1 class="fragment">DONNE</h1> -->
+        <!-- <ul> -->
+        <!--   <li class="fragment">I numeri in Italia</li> -->
+        <!--   <li class="fragment">Confronto con l’Europa</li> -->
+        <!--   <li class="fragment">La nuova legge sul consenso</li> -->
+        <!-- </ul> -->
+      </section>
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'convex',
+      autoPlayMedia: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+
+</body>
 </html>
+
