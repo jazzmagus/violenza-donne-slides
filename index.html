@@ -6,6 +6,14 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
   >
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
 
   <title>Violenza sulle donne | Slides</title>
 
@@ -21,11 +29,7 @@
       color: #fee2e2;
     }
 
-    /* .reveal { */
-    /*   color: #000; */
-    /* } */
-
-    /* Overlay nero 40% sopra l'immagine di sfondo di ogni slide */
+    /* Overlay sopra l'immagine di sfondo di ogni slide */
     .reveal .backgrounds .slide-background {
       background-size: cover !important;
       background-position: center center !important;
@@ -35,7 +39,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.2); /* overlay nero 40% */
+      background: rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -54,11 +58,10 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #9F0712;
-      /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
       margin-bottom: 1.5rem;
     }
 
-    /* Elenchi puntati SUPER GRANDI (max 2 punti) */
+    /* Elenchi puntati SUPER GRANDI */
     ul {
       margin-top: 1.5rem;
       list-style-type: disc;
@@ -77,6 +80,13 @@
       color: #9F0712;
     }
 
+    /* Testo piccolo per le fonti */
+    .fonte {
+      margin-top: 1.2rem;
+      font-size: 1.3rem;
+      color: #111;
+    }
+
     /* Fragments un po’ più morbidi */
     .fragment {
       transition: opacity 0.5s ease, transform 0.5s ease;
@@ -90,36 +100,30 @@
 </head>
 
 <body>
+
+  <!-- SOTTOFONDO MUSICALE (modifica il path del file) -->
+  <!-- Metti il tuo file in audio/sottofondo.mp3 oppure cambia il src -->
+  <audio id="bg-music" src="audio/50_ways.mp3" autoplay loop></audio>
+
   <div class="reveal">
     <div class="slides">
 
       <!-- SLIDE 1 - TITOLO -->
-
       <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
         <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
         <h1 class="fragment r-fit-text">VIOLENZA sulle</h1>
         <h1 class="fragment">DONNE</h1>
-        <!-- <ul> -->
-        <!--   <li class="fragment">I numeri in Italia</li> -->
-        <!--   <li class="fragment">Confronto con l’Europa</li> -->
-        <!--   <li class="fragment">La nuova legge sul consenso</li> -->
-        <!-- </ul> -->
       </section>
 
+      <!-- SLIDE 2 - 25 NOVEMBRE -->
       <section data-background-image="images/fragile.jpg" data-background-opacity="0.46">
         <h1 style="color:#9F0712" class="r-fit-text">25 novembre 2025</h1>
-        <h1 class="fragment r-fit-text">Giornata internazionale per l'eliminazione della</h1>
-        <h1 class="fragment r-fit-text">violenza contro le DONNE</h1>
-        <!-- <ul> -->
-        <!--   <li class="fragment">I numeri in Italia</li> -->
-        <!--   <li class="fragment">Confronto con l’Europa</li> -->
-        <!--   <li class="fragment">La nuova legge sul consenso</li> -->
-        <!-- </ul> -->
+        <h1 class="fragment r-fit-text">Giornata internazionale per</h1>
+        <h1 class="fragment r-fit-text">l'eliminazione della violenza contro le DONNE</h1>
       </section>
 
-      <section
-        data-background-image="images/fragile.jpg"
-      >
+      <!-- SLIDE 3 - I NUMERI NON SONO SOLO NUMERI -->
+      <section data-background-image="images/fragile.jpg">
         <h1 class="fragment r-fit-text">Violenza sulle donne</h1>
         <ul>
           <li class="fragment"><strong>I numeri non sono solo numeri</strong></li>
@@ -127,7 +131,7 @@
         </ul>
       </section>
 
-      <!-- SLIDE 2 - ITALIA, ULTIMI 10 ANNI -->
+      <!-- SLIDE 4 - ITALIA ULTIMI 10 ANNI (STIMA) -->
       <section
         data-background-image="images/fragile.jpg"
         data-auto-animate
@@ -136,54 +140,80 @@
         <h1 class="fragment">Ultimi 10 anni</h1>
         <ul>
           <li class="fragment">Oltre <strong>1.100 donne uccise</strong> in Italia</li>
-          <li class="fragment">Una donna ogni <strong>circa 3 giorni</strong></li>
+          <li class="fragment">Una ogni <strong>circa 3 giorni</strong></li>
         </ul>
+        <p class="fonte fragment">
+          Fonte (stime): Casa delle donne per non subire violenza – Bologna, Quaderni sui femminicidi (2005–2022).
+        </p>
       </section>
 
-      <!-- SLIDE 3 - ITALIA, ULTIMI 20 ANNI -->
+      <!-- SLIDE 5 - DAL 2005 AD OGGI (QUASI 20 ANNI) -->
       <section
         data-background-image="images/fragile.jpg"
         data-auto-animate
         data-auto-animate-id="it-dati"
       >
-        <h1 class="fragment">Ultimi 20 anni</h1>
+        <h1 class="fragment">Dal 2005 ad oggi</h1>
         <ul>
-          <li class="fragment">Più di <strong>2.000 vittime</strong> di femminicidio</li>
-          <li class="fragment">La violenza di genere è <strong>strutturale</strong></li>
+          <li class="fragment">Almeno <strong>2.038 donne uccise</strong> (femminicidi)</li>
+          <li class="fragment">Media di circa <strong>113 all’anno</strong></li>
         </ul>
+        <p class="fonte fragment">
+          Fonte: Casa delle donne – Quaderno “I femminicidi in Italia” (dati 2005–2022, 2.038 casi complessivi).
+        </p>
       </section>
 
-      <!-- SLIDE 4 - CONFRONTO EUROPA -->
-      <section
-        data-background-image="images/fragile.jpg"
-      >
+      <!-- SLIDE 6 - DENTRO LE RELAZIONI -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Dentro le relazioni</h1>
+        <ul>
+          <li class="fragment">La maggior parte delle donne è uccisa da <strong>partner, ex partner o familiari</strong></li>
+          <li class="fragment">La casa, spesso, è il luogo <strong>più pericoloso</strong></li>
+        </ul>
+        <p class="fonte fragment">
+          Fonti: Istat, Ministero dell’Interno, rapporti EURES su femminicidi e omicidi in ambito familiare.
+        </p>
+      </section>
+
+      <!-- SLIDE 7 - LA VIOLENZA CHE NON UCCIDE -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">La violenza che non uccide</h1>
+        <ul>
+          <li class="fragment"><strong>6,8 milioni</strong> di donne (31,5% tra 16 e 70 anni)</li>
+          <li class="fragment">hanno subito violenza <strong>fisica o sessuale</strong> almeno una volta nella vita</li>
+        </ul>
+        <p class="fonte fragment">
+          Fonte: Istat, “Violenza contro le donne dentro e fuori la famiglia” e dossier Senato su femminicidi.
+        </p>
+      </section>
+
+      <!-- SLIDE 8 - ITALIA ED EUROPA -->
+      <section data-background-image="images/fragile.jpg">
         <h1 class="fragment r-fit-text">Italia ed Europa</h1>
         <ul>
-          <li class="fragment">Meno omicidi in generale, ma <strong>femminicidi tenaci</strong></li>
-          <li class="fragment">La violenza sulle donne <strong>non è un’emergenza</strong>, è un sistema</li>
+          <li class="fragment">Tasso di omicidi tra i più bassi dell’UE</li>
+          <li class="fragment">Ma i femminicidi diminuiscono <strong>meno</strong> degli altri omicidi</li>
         </ul>
+        <p class="fonte fragment">
+          Fonti: European Data Journalism, Openpolis, analisi su omicidi di donne in Italia e UE.
+        </p>
       </section>
 
-      <!-- SLIDE 5 - NUOVA LEGGE -->
-      <section
-        data-background-image="images/fragile.jpg"
-      >
+      <!-- SLIDE 9 - LA NUOVA LEGGE SUL CONSENSO -->
+      <section data-background-image="images/fragile.jpg">
         <h1 class="fragment r-fit-text">La nuova legge</h1>
         <ul>
-          <li class="fragment"><strong>Consenso libero e attuale</strong> al centro della definizione di violenza</li>
-          <li class="fragment">La legge cambia, ma deve cambiare anche <strong>la cultura</strong></li>
+          <li class="fragment"><strong>Consenso libero e attuale</strong> al centro della violenza sessuale</li>
+          <li class="fragment">Senza consenso pieno, consapevole e attuale <strong>è sempre stupro</strong></li>
         </ul>
+        <p class="fonte fragment">
+          Fonti: Camera dei deputati, dossier di riforma art. 609-bis c.p.; articoli di approfondimento su “senza consenso è stupro”.
+        </p>
       </section>
 
+      <!-- SLIDE 10 - CHIUSURA -->
       <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
         <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
-        <!-- <h1 class="fragment r-fit-text">VIOLENZA sulle</h1> -->
-        <!-- <h1 class="fragment">DONNE</h1> -->
-        <!-- <ul> -->
-        <!--   <li class="fragment">I numeri in Italia</li> -->
-        <!--   <li class="fragment">Confronto con l’Europa</li> -->
-        <!--   <li class="fragment">La nuova legge sul consenso</li> -->
-        <!-- </ul> -->
       </section>
 
     </div>
