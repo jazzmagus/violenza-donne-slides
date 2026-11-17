@@ -6,14 +6,6 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
   >
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  >
 
   <title>Violenza sulle donne | Slides</title>
 
@@ -21,6 +13,9 @@
   <link rel="stylesheet" href="dist/reveal.css">
   <link rel="stylesheet" href="dist/theme/serif.css" id="theme">
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 
   <style>
     /* Palette generale da campagna sociale */
@@ -39,12 +34,22 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.5);
       z-index: 1;
     }
 
     .reveal .backgrounds .slide-background {
       z-index: 0;
+    }
+
+    /* Prima slide: la figura compare rapidamente, poi arriva la scritta */
+    .reveal .backgrounds .slide-background.present:first-child {
+      animation: figura-in 4.5s ease-in-out;
+    }
+
+    @keyframes figura-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
 
     /* Testo slide sopra l’overlay */
@@ -54,9 +59,11 @@
 
     /* MAXI TITOLI */
     h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
       font-size: 3.4rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.04em;
       color: #9F0712;
       margin-bottom: 1.5rem;
     }
@@ -83,8 +90,12 @@
     /* Testo piccolo per le fonti */
     .fonte {
       margin-top: 1.2rem;
-      font-size: 1.3rem;
-      color: #111;
+      padding: 0.5rem 0.9rem;
+      font-size: 1.7rem;
+      line-height: 1.35;
+      color: #000;
+      background: rgba(255, 255, 255, 0.55);
+      border-left: 4px solid #9F0712;
     }
 
     /* Fragments un po’ più morbidi */
@@ -109,15 +120,15 @@
     <div class="slides">
 
       <!-- SLIDE 1 - TITOLO -->
-      <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
-        <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
+      <section data-background-image="images/fragile.jpg" data-autoslide="5200">
+        <h1 style="color:#9F0712" class="fragment r-fit-text" data-autoslide="3000">BASTA!</h1>
         <h1 class="fragment r-fit-text">VIOLENZA sulle</h1>
         <h1 class="fragment">DONNE</h1>
       </section>
 
       <!-- SLIDE 2 - 25 NOVEMBRE -->
-      <section data-background-image="images/fragile.jpg" data-background-opacity="0.46">
-        <h1 style="color:#9F0712" class="r-fit-text">25 novembre 2025</h1>
+      <section data-background-image="images/fragile.jpg" data-autoslide="3000">
+        <h1 style="color:#9F0712" class="r-fit-text">25 novembre 2026</h1>
         <h1 class="fragment r-fit-text">Giornata internazionale per</h1>
         <h1 class="fragment r-fit-text">l'eliminazione della violenza contro le DONNE</h1>
       </section>
@@ -212,7 +223,7 @@
       </section>
 
       <!-- SLIDE 10 - MANOSFERA: TITOLO D'IMPATTO -->
-      <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
+      <section data-background-image="images/fragile.jpg" data-autoslide="3000">
         <h1 style="color:#9F0712" class="fragment r-fit-text">MANOSFERA</h1>
         <h1 class="fragment r-fit-text">Un nuovo fenomeno.</h1>
         <h1 class="fragment r-fit-text">O un gran brutto trend.</h1>
@@ -256,11 +267,14 @@
 
       <!-- SLIDE 12c - GLI INFLUENCER -->
       <section data-background-image="images/fragile.jpg">
-        <h1 class="fragment r-fit-text">Non solo sigle</h1>
+        <h1 class="fragment r-fit-text">Non solo sigle: gli influencer</h1>
         <ul>
-          <li class="fragment">Influencer e "coach di mascolinità"</li>
-          <li class="fragment">Es. <strong>Andrew Tate</strong></li>
+          <li class="fragment">Milioni di follower, si presentano come "coach di mascolinità"</li>
+          <li class="fragment">Es. <strong>Andrew Tate</strong>: incriminato nel Regno Unito (2025) per <strong>stupro e tratta</strong>; nega le accuse, procedimenti in corso</li>
         </ul>
+        <p class="fonte fragment">
+          Fonti: Il Post, “Romania, accolto il ricorso dei fratelli Tate” (2024); LaPresse, “Regno Unito, fratelli Tate ufficialmente incriminati” (29 maggio 2025).
+        </p>
       </section>
 
       <!-- SLIDE 13 - IL DIVARIO GENERAZIONALE -->
@@ -287,6 +301,30 @@
         </p>
       </section>
 
+      <!-- SLIDE 14b - I DATI ITALIANI -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">E in Italia?</h1>
+        <ul>
+          <li class="fragment">Giovani uomini: solo il <strong>63%</strong> pensa che una vittima debba sempre denunciare (74% tra le giovani donne)</li>
+          <li class="fragment">La manosfera è uscita dalla nicchia: è <strong>cultura diffusa</strong> sui social</li>
+        </ul>
+        <p class="fonte fragment">
+          Fonti: SWG per Giornaliste Italiane (837 maggiorenni); ActionAid, report “Suggerito per te”.
+        </p>
+      </section>
+
+      <!-- SLIDE 14c - IL VUOTO DI DATI -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Un vuoto da colmare</h1>
+        <ul>
+          <li class="fragment">Mancano indagini nazionali sulla manosfera e sui giovani uomini</li>
+          <li class="fragment">Anche i dati sui femminicidi sono <strong>incompleti e poco trasparenti</strong></li>
+        </ul>
+        <p class="fonte fragment">
+          Fonti: Il Post, “La manosfera è sempre più visibile” (2025); Il Post, “In Italia abbiamo un problema con i dati sui femminicidi” (2025).
+        </p>
+      </section>
+
       <!-- SLIDE 15 - IL LEGAME CON LA RADICALIZZAZIONE -->
       <section data-background-image="images/fragile.jpg">
         <h1 class="fragment r-fit-text">Dalla palestra alla radicalizzazione</h1>
@@ -300,7 +338,7 @@
       </section>
 
       <!-- SLIDE 16 - APPROFONDIMENTO -->
-      <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
+      <section data-background-image="images/fragile.jpg" data-autoslide="3000">
         <h1 class="fragment r-fit-text">Per approfondire</h1>
         <p class="fragment" style="font-size:1.6rem; color:#000;">
           Articolo completo, con dati e grafici, su<br>
@@ -308,8 +346,66 @@
         </p>
       </section>
 
-      <!-- SLIDE 17 - CHIUSURA -->
-      <section data-background-image="images/fragile.jpg" data-background-opacity="0.6">
+      <!-- SLIDE 17 - CHIEDERE AIUTO -->
+      <section data-background-image="images/fragile.jpg" data-autoslide="3000">
+        <h1 style="color:#9F0712" class="fragment r-fit-text">Non sei sola</h1>
+        <h1 class="fragment r-fit-text">Si può chiedere aiuto</h1>
+      </section>
+
+      <!-- SLIDE 18 - 1522 -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Il numero 1522</h1>
+        <ul>
+          <li class="fragment"><strong>Gratuito</strong>, attivo <strong>24 ore su 24</strong>, anche in chat</li>
+          <li class="fragment">Risponde personale qualificato, in più lingue</li>
+        </ul>
+        <p class="fonte fragment">
+          Fonte: Istat, “Il numero di pubblica utilità 1522”. In pericolo immediato: <strong>112</strong>.
+        </p>
+      </section>
+
+      <!-- SLIDE 19 - CENTRI ANTIVIOLENZA -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">I centri antiviolenza</h1>
+        <ul>
+          <li class="fragment"><strong>409</strong> centri attivi in Italia (2024)</li>
+          <li class="fragment">Oltre <strong>36.400 donne</strong> hanno iniziato un percorso di uscita dalla violenza</li>
+        </ul>
+        <p class="fonte fragment">
+          Fonte: Istat, “I centri antiviolenza e le donne che hanno avviato il percorso di uscita dalla violenza – Anno 2024”.
+        </p>
+      </section>
+
+      <!-- SLIDE 20 - I SEGNALI -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">I segnali da riconoscere</h1>
+        <ul>
+          <li class="fragment"><strong>Controllo</strong>: telefono, spostamenti, amicizie</li>
+          <li class="fragment"><strong>Isolamento</strong> e gelosia possessiva</li>
+          <li class="fragment">Umiliazioni e minacce, <strong>sempre più frequenti</strong></li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 21 - CHI ASSISTE -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Se sei testimone</h1>
+        <ul>
+          <li class="fragment"><strong>Ascolta</strong> senza giudicare, credi a ciò che ti dicono</li>
+          <li class="fragment">Non restare in silenzio: chiama <strong>1522</strong> o <strong>112</strong></li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 22 - EDUCAZIONE AFFETTIVA -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">La prevenzione comincia prima</h1>
+        <ul>
+          <li class="fragment">Educazione al <strong>rispetto</strong> e alle relazioni, a scuola e in famiglia</li>
+          <li class="fragment">Riconoscere il <strong>consenso</strong> e i modelli tossici online</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 23 - CHIUSURA -->
+      <section data-background-image="images/fragile.jpg" data-autoslide="3000">
         <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
       </section>
 
@@ -326,7 +422,7 @@
     hash: true,
     transition: 'convex',
     autoPlayMedia: true,
-    autoSlide: 2000,         // 8 secondi a slide
+    autoSlide: 5000,         // ms per slide/frammento; override con data-autoslide
     autoSlideStoppable: false,
     loop: false,
     plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
