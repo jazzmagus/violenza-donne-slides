@@ -58,9 +58,12 @@
     }
 
     /* MAXI TITOLI */
-    h1 {
+    .reveal h1 {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 900;
+    }
+
+    h1 {
       font-size: 3.4rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -85,6 +88,107 @@
     /* Colore accento rosso scuro sui bullet importanti */
     li strong {
       color: #9F0712;
+    }
+
+    /* Grafici SVG */
+    .chart {
+      width: 100%;
+      max-height: 440px;
+    }
+
+    .chart text {
+      fill: #000;
+      font-family: Georgia, serif;
+    }
+
+    .chart .bar,
+    .chart .bar-h {
+      fill: #9F0712;
+      transform-box: fill-box;
+    }
+
+    .chart .bar {
+      transform-origin: bottom;
+    }
+
+    .chart .bar-h {
+      fill: #6b4a4a;
+      transform-origin: left;
+    }
+
+    .chart .bar-h.hl {
+      fill: #9F0712;
+    }
+
+    .reveal section.present .fragment.visible .bar {
+      animation: cresce-v 0.8s ease-out both;
+      animation-delay: calc(var(--i) * 40ms);
+    }
+
+    .reveal section.present .fragment.visible .bar-h {
+      animation: cresce-h 0.8s ease-out both;
+      animation-delay: calc(var(--i) * 80ms);
+    }
+
+    @keyframes cresce-v { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes cresce-h { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    /* Slide finale: nomi che scorrono */
+    .nomi .reveal .backgrounds .slide-background::before {
+      background: transparent;
+    }
+
+    .nomi .reveal .backgrounds .slide-background.present {
+      filter: invert(1) brightness(0.5);
+    }
+
+    .reveal h1.nomi-titolo {
+      color: #f5f5f5;
+      text-align: center;
+      font-size: 2.2rem;
+      margin: 0 0 0.8rem;
+    }
+
+    .nomi-vista {
+      height: 480px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
+      mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
+    }
+
+    .nomi-lista {
+      transform: translateY(480px);
+    }
+
+    .reveal section.present .nomi-lista {
+      animation: nomi-scorri 85s linear 1.5s both;
+    }
+
+    @keyframes nomi-scorri {
+      from { transform: translateY(480px); }
+      to   { transform: translateY(-100%); }
+    }
+
+    .nomi-lista div {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: 2.1rem;
+      line-height: 1.5;
+      color: #f5f5f5;
+    }
+
+    .nomi-lista small {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #9a9a9a;
+      margin-left: 0.6rem;
+    }
+
+    .nomi-fonte {
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
+      color: #9a9a9a;
     }
 
     /* Testo piccolo per le fonti */
@@ -174,6 +278,21 @@
         </p>
       </section>
 
+      <!-- SLIDE 5a - GRAFICO ANNO PER ANNO -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Donne uccise, anno per anno</h1>
+        <div class="fragment">
+          <svg class="chart" viewBox="0 0 860 370" role="img" aria-label="Donne uccise in Italia per anno, 2005-2023">
+            <rect class="bar" style="--i:0" x="12" y="150.0" width="34" height="180.0"/><text x="29.0" y="144.0" text-anchor="middle" font-size="15">84</text><text x="29.0" y="354" text-anchor="middle" font-size="15">05</text><rect class="bar" style="--i:1" x="56" y="111.4" width="34" height="218.6"/><text x="73.0" y="105.4" text-anchor="middle" font-size="15">102</text><text x="73.0" y="354" text-anchor="middle" font-size="15">06</text><rect class="bar" style="--i:2" x="100" y="109.3" width="34" height="220.7"/><text x="117.0" y="103.3" text-anchor="middle" font-size="15">103</text><text x="117.0" y="354" text-anchor="middle" font-size="15">07</text><rect class="bar" style="--i:3" x="144" y="87.9" width="34" height="242.1"/><text x="161.0" y="81.9" text-anchor="middle" font-size="15">113</text><text x="161.0" y="354" text-anchor="middle" font-size="15">08</text><rect class="bar" style="--i:4" x="188" y="70.7" width="34" height="259.3"/><text x="205.0" y="64.7" text-anchor="middle" font-size="15">121</text><text x="205.0" y="354" text-anchor="middle" font-size="15">09</text><rect class="bar" style="--i:5" x="232" y="53.6" width="34" height="276.4"/><text x="249.0" y="47.6" text-anchor="middle" font-size="15">129</text><text x="249.0" y="354" text-anchor="middle" font-size="15">10</text><rect class="bar" style="--i:6" x="276" y="51.4" width="34" height="278.6"/><text x="293.0" y="45.4" text-anchor="middle" font-size="15">130</text><text x="293.0" y="354" text-anchor="middle" font-size="15">11</text><rect class="bar" style="--i:7" x="320" y="60.0" width="34" height="270.0"/><text x="337.0" y="54.0" text-anchor="middle" font-size="15">126</text><text x="337.0" y="354" text-anchor="middle" font-size="15">12</text><rect class="bar" style="--i:8" x="364" y="42.9" width="34" height="287.1"/><text x="381.0" y="36.9" text-anchor="middle" font-size="15">134</text><text x="381.0" y="354" text-anchor="middle" font-size="15">13</text><rect class="bar" style="--i:9" x="408" y="83.6" width="34" height="246.4"/><text x="425.0" y="77.6" text-anchor="middle" font-size="15">115</text><text x="425.0" y="354" text-anchor="middle" font-size="15">14</text><rect class="bar" style="--i:10" x="452" y="79.3" width="34" height="250.7"/><text x="469.0" y="73.3" text-anchor="middle" font-size="15">117</text><text x="469.0" y="354" text-anchor="middle" font-size="15">15</text><rect class="bar" style="--i:11" x="496" y="70.7" width="34" height="259.3"/><text x="513.0" y="64.7" text-anchor="middle" font-size="15">121</text><text x="513.0" y="354" text-anchor="middle" font-size="15">16</text><rect class="bar" style="--i:12" x="540" y="90.0" width="34" height="240.0"/><text x="557.0" y="84.0" text-anchor="middle" font-size="15">112</text><text x="557.0" y="354" text-anchor="middle" font-size="15">17</text><rect class="bar" style="--i:13" x="584" y="83.6" width="34" height="246.4"/><text x="601.0" y="77.6" text-anchor="middle" font-size="15">115</text><text x="601.0" y="354" text-anchor="middle" font-size="15">18</text><rect class="bar" style="--i:14" x="628" y="126.4" width="34" height="203.6"/><text x="645.0" y="120.4" text-anchor="middle" font-size="15">95</text><text x="645.0" y="354" text-anchor="middle" font-size="15">19</text><rect class="bar" style="--i:15" x="672" y="111.4" width="34" height="218.6"/><text x="689.0" y="105.4" text-anchor="middle" font-size="15">102</text><text x="689.0" y="354" text-anchor="middle" font-size="15">20</text><rect class="bar" style="--i:16" x="716" y="102.9" width="34" height="227.1"/><text x="733.0" y="96.9" text-anchor="middle" font-size="15">106</text><text x="733.0" y="354" text-anchor="middle" font-size="15">21</text><rect class="bar" style="--i:17" x="760" y="87.9" width="34" height="242.1"/><text x="777.0" y="81.9" text-anchor="middle" font-size="15">113</text><text x="777.0" y="354" text-anchor="middle" font-size="15">22</text><rect class="bar" style="--i:18" x="804" y="83.6" width="34" height="246.4"/><text x="821.0" y="77.6" text-anchor="middle" font-size="15">115</text><text x="821.0" y="354" text-anchor="middle" font-size="15">23</text>
+            <line x1="0" x2="860" y1="87.9" y2="87.9" stroke="#000" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <text x="2" y="81.9" text-anchor="start" font-size="15" font-style="italic">media 113</text>
+          </svg>
+        </div>
+        <p class="fonte fragment">
+          Fonte: Casa delle donne per non subire violenza – Bologna, “I femminicidi in Italia” (dati raccolti dalla stampa, 2005-2023). Totale 2.153.
+        </p>
+      </section>
+
       <!-- SLIDE 5b - DATI 2024-2025 -->
       <section data-background-image="images/fragile.jpg">
         <h1 class="fragment r-fit-text">Gli ultimi dati: 2024-2025</h1>
@@ -198,6 +317,19 @@
         </p>
       </section>
 
+      <!-- SLIDE 6b - GRAFICO AUTORE-VITTIMA -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Chi uccide: i numeri del 2023</h1>
+        <div class="fragment">
+          <svg class="chart" viewBox="0 0 860 365" role="img" aria-label="Relazione tra autore e vittima, 2023">
+            <text x="205" y="35" text-anchor="end" font-size="19">Partner attuale</text><rect class="bar-h hl" style="--i:0" x="215" y="10" width="540.0" height="32"/><text x="765.0" y="35" font-size="19" font-weight="bold">50</text><text x="205" y="79" text-anchor="end" font-size="19">Ex partner</text><rect class="bar-h hl" style="--i:1" x="215" y="54" width="183.6" height="32"/><text x="408.6" y="79" font-size="19" font-weight="bold">17</text><text x="205" y="123" text-anchor="end" font-size="19">Figlio</text><rect class="bar-h" style="--i:2" x="215" y="98" width="183.6" height="32"/><text x="408.6" y="123" font-size="19" font-weight="bold">17</text><text x="205" y="167" text-anchor="end" font-size="19">Conoscente</text><rect class="bar-h" style="--i:3" x="215" y="142" width="162.0" height="32"/><text x="387.0" y="167" font-size="19" font-weight="bold">15</text><text x="205" y="211" text-anchor="end" font-size="19">Altri parenti</text><rect class="bar-h" style="--i:4" x="215" y="186" width="64.8" height="32"/><text x="289.8" y="211" font-size="19" font-weight="bold">6</text><text x="205" y="255" text-anchor="end" font-size="19">Non determinato</text><rect class="bar-h" style="--i:5" x="215" y="230" width="54.0" height="32"/><text x="279.0" y="255" font-size="19" font-weight="bold">5</text><text x="205" y="299" text-anchor="end" font-size="19">Padre</text><rect class="bar-h" style="--i:6" x="215" y="274" width="43.2" height="32"/><text x="268.2" y="299" font-size="19" font-weight="bold">4</text><text x="205" y="343" text-anchor="end" font-size="19">Sconosciuto</text><rect class="bar-h" style="--i:7" x="215" y="318" width="10.8" height="32"/><text x="235.8" y="343" font-size="19" font-weight="bold">1</text>
+          </svg>
+        </div>
+        <p class="fonte fragment">
+          Partner o ex partner: <strong>67 casi su 115 (58%)</strong>. Fonte: Casa delle donne – Bologna, Quaderno 2023.
+        </p>
+      </section>
+
       <!-- SLIDE 7 - LA VIOLENZA CHE NON UCCIDE -->
       <section data-background-image="images/fragile.jpg">
         <h1 class="fragment r-fit-text">La violenza che non uccide</h1>
@@ -219,6 +351,18 @@
         </ul>
         <p class="fonte fragment">
           Fonti: European Data Journalism, Openpolis, analisi su omicidi di donne in Italia e UE.
+        </p>
+      </section>
+
+      <!-- SLIDE 8b - NEL MONDO -->
+      <section data-background-image="images/fragile.jpg">
+        <h1 class="fragment r-fit-text">Nel mondo</h1>
+        <ul>
+          <li class="fragment"><strong>83.000 donne</strong> uccise intenzionalmente nel 2024</li>
+          <li class="fragment"><strong>50.000</strong> da partner o familiari: una ogni <strong>10 minuti</strong></li>
+        </ul>
+        <p class="fonte fragment">
+          Fonte: UN Women e UNODC, “Femicides in 2024: Global estimates of intimate partner/family member femicides” (25 novembre 2025).
         </p>
       </section>
 
@@ -421,15 +565,36 @@
         <h1 style="color:#9F0712" class="fragment r-fit-text">BASTA!</h1>
       </section>
 
+      <!-- SLIDE FINALE - I NOMI -->
+      <section data-background-image="images/fragile.jpg" data-state="nomi">
+        <h1 class="nomi-titolo">Alcuni dei loro nomi</h1>
+        <div class="nomi-vista"><div class="nomi-lista" id="nomi-lista"></div></div>
+        <p class="nomi-fonte">Elenco parziale, 2022-2026. Fonte: femminicidioitalia.info</p>
+      </section>
+
     </div>
   </div>
 
+  <script src="nomi.js"></script>
   <script src="dist/reveal.js"></script>
   <script src="plugin/notes/notes.js"></script>
   <script src="plugin/markdown/markdown.js"></script>
   <script src="plugin/highlight/highlight.js"></script>
 
 <script>
+  (function () {
+    var mesi = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+    var box = document.getElementById('nomi-lista');
+    (window.NOMI || []).forEach(function (r) {
+      var d = r[1].split('-');
+      var el = document.createElement('div');
+      el.textContent = r[0];
+      var small = document.createElement('small');
+      small.textContent = mesi[+d[1] - 1] + ' ' + d[0];
+      el.appendChild(small);
+      box.appendChild(el);
+    });
+  })();
   Reveal.initialize({
     hash: true,
     transition: 'convex',
