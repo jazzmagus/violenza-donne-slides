@@ -229,9 +229,7 @@
 
 <body>
 
-  <!-- SOTTOFONDO MUSICALE (modifica il path del file) -->
-  <!-- Metti il tuo file in audio/sottofondo.mp3 oppure cambia il src -->
-  <audio id="bg-music" src="audio/50_ways.mp3" autoplay loop></audio>
+  <audio id="bg-music" src="audio/consolidated.mp3" autoplay loop></audio>
 
   <div class="reveal">
     <div class="slides">
@@ -606,6 +604,17 @@
       small.textContent = mesi[+d[1] - 1] + ' ' + d[0];
       el.appendChild(small);
       box.appendChild(el);
+    });
+  })();
+  (function () {
+    var a = document.getElementById('bg-music');
+    a.volume = 0.2;
+    function start() {
+      a.play();
+      ['click', 'keydown', 'touchstart'].forEach(function (e) { document.removeEventListener(e, start); });
+    }
+    a.play().catch(function () {
+      ['click', 'keydown', 'touchstart'].forEach(function (e) { document.addEventListener(e, start); });
     });
   })();
   Reveal.initialize({
